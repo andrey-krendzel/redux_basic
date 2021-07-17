@@ -1,9 +1,8 @@
-import noteReducer from './reducers/noteReducer'
-import { createNote, toggleImportanceOf } from './reducers/noteReducer'
-import { useSelector, useDispatch } from 'react-redux'
 
-const generateId = () =>
-  Math.floor(Math.random() * 1000000)
+import React from 'react'
+import Notes from './components/Notes'
+import NewNote from './components/NewNote'
+
 
   const App = () => {
 
@@ -14,5 +13,5 @@ const generateId = () =>
       </div>
     )
   }
-  
+
 export default App
