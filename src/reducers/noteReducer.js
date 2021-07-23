@@ -11,7 +11,7 @@ const initialState = [
   },
 ]
 
-const noteReducer = (state = initialState, action) => {
+const noteReducer = (state = [], action) => {
   console.log('ACTION: ', action)
   switch(action.type) {
     case 'NEW_NOTE':
@@ -26,6 +26,8 @@ const noteReducer = (state = initialState, action) => {
       return state.map(note =>
         note.id !== id ? note : changedNote 
       )
+      case 'INIT_NOTES':
+      return action.data
     default:
       return state
   }
